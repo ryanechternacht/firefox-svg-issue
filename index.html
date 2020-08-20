@@ -1,0 +1,59 @@
+<html>
+  <body>
+    <svg
+      height="600"
+      width="600"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <filter id="greyscale">
+        <feColorMatrix
+          type="saturate"
+          values="0"
+        />
+      </filter>
+      <filter id="blur">
+        <feGaussianBlur stdDeviation="5"/>
+      </filter>
+      <defs>
+        <pattern id="no-filter" height="1" width="1">
+          <image x="0" y="0" href="https://logo.clearbit.com/www.hubspot.com" height="48" width="48"/>
+        </pattern>
+        <pattern id="greyscale-filter" height="1" width="1">
+          <image x="0" y="0" href="https://logo.clearbit.com/www.hubspot.com" height="48" width="48" filter="url(#greyscale)"/>
+        </pattern>
+        <pattern id="blur-filter" height="1" width="1">
+          <image x="0" y="0" href="https://logo.clearbit.com/www.hubspot.com" height="48" width="48" filter="url(#blur)"/>
+        </pattern>
+        <pattern id="no-filter-bigger" height="1" width="1">
+          <image x="0" y="0" href="https://logo.clearbit.com/www.hubspot.com" height="72" width="72"/>
+        </pattern>
+        <pattern id="greyscale-filter-bigger" height="1" width="1">
+          <image x="0" y="0" href="https://logo.clearbit.com/www.hubspot.com" height="72" width="72" filter="url(#greyscale)"/>
+        </pattern>
+        <pattern id="blur-filter-bigger" height="1" width="1">
+          <image x="0" y="0" href="https://logo.clearbit.com/www.hubspot.com" height="72" width="72" filter="url(#blur)"/>
+        </pattern>
+      </defs>
+      <text x="180" y="50">no filter</text>
+      <text x="280" y="50">greyscale</text>
+      <text x="380" y="50">blur</text>
+      <text x="50" y="100">48px circle</text>
+      <text x="50" y="200">72px circle</text>
+      <text x="50" y="300">48px rect</text>
+      <text x="50" y="400">72px rect</text>
+      <circle r="24" cx="200" cy="100" fill="url(#no-filter)" class="node" />
+      <circle r="24" cx="300" cy="100" fill="url(#greyscale-filter)" class="node" />
+      <circle r="24" cx="400" cy="100" fill="url(#blur-filter)" class="node" />
+      <circle r="36" cx="200" cy="200" fill="url(#no-filter-bigger)" class="node" />
+      <circle r="36" cx="300" cy="200" fill="url(#greyscale-filter-bigger)" class="node" />
+      <circle r="36" cx="400" cy="200" fill="url(#blur-filter-bigger)" class="node" />
+      <rect x="180" y="280" width="48" height="48" fill="url(#no-filter)" class="node" />
+      <rect x="280" y="280" width="48" height="48" fill="url(#greyscale-filter)" class="node" />
+      <rect x="380" y="280" width="48" height="48" fill="url(#blur-filter)" class="node" />
+      <rect x="180" y="380" width="72" height="72" fill="url(#no-filter-bigger)" class="node" />
+      <rect x="280" y="380" width="72" height="72" fill="url(#greyscale-filter-bigger)" class="node" />
+      <rect x="380" y="380" width="72" height="72" fill="url(#blur-filter-bigger)" class="node" />
+    </svg>
+  </body>
+</html>
